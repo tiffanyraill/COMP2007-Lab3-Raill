@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <h1>Course List</h1>
+                <a href="CourseDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Course</a>
                 <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover"
                      ID="CoursesGridView" AutoGenerateColumns="false">
                     <Columns>
