@@ -4,14 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 //using statements required for EF DB access
 using COMP2007_Lab3_Raill.Models;
 using System.Web.ModelBinding;
 
 namespace COMP2007_Lab3_Raill
 {
-    public partial class DepartmentDetails : System.Web.UI.Page
+    public partial class CourseDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,30 +19,31 @@ namespace COMP2007_Lab3_Raill
 
         protected void CancelButton_Click(object sender, EventArgs e)
         {
-            //redirects back to departments page
-            Response.Redirect("~/Departments.aspx");
+            //redirects back to courses page
+            Response.Redirect("~/Courses.aspx");
         }
 
         protected void Savebutton_Click(object sender, EventArgs e)
         {
+
             //use Ef to connect to server
             using (DefaultConnection db = new DefaultConnection())
             {
-                //use the Departments model to create new department object and save new record
-                Department newDepartment = new Department();
+                //use the Courses model to create new course object and save new record
+                Course newCourse = new Course();
 
-                //add data to the new department record
-                newDepartment.Name = NameTextBox.Text;
-                newDepartment.Budget = Convert.ToDecimal(BudgetTextBox.Text);
+                //add data to the new course record
+                newCourse.Title = TitleTextBox.Text;
                 
-                //use linq and ADO.NET to add/insert a new department into the DB
-                db.Departments.Add(newDepartment);
+
+                //use linq and ADO.NET to add/insert a new course into the DB
+                db.Courses.Add(newCourse);
 
                 //save our changes
                 db.SaveChanges();
 
-                //redirect back to the updated departments page
-                Response.Redirect("~/Departments.aspx");
+                //redirect back to the updated courses page
+                Response.Redirect("~/Courses.aspx");
 
             }
         }

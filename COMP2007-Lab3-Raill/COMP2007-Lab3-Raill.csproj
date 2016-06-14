@@ -80,6 +80,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CourseDetails.aspx" />
     <Content Include="Courses.aspx" />
     <Content Include="DepartmentDetails.aspx" />
     <Content Include="Departments.aspx" />
@@ -154,6 +155,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseDetails.aspx.cs">
+      <DependentUpon>CourseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseDetails.aspx.designer.cs">
+      <DependentUpon>CourseDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Courses.aspx.cs">
       <DependentUpon>Courses.aspx</DependentUpon>

@@ -10,25 +10,16 @@
 namespace COMP2007_Lab3_Raill {
     
     
-    public partial class DepartmentDetails {
+    public partial class CourseDetails {
         
         /// <summary>
-        /// NameTextBox control.
+        /// TitleTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NameTextBox;
-        
-        /// <summary>
-        /// BudgetTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BudgetTextBox;
+        protected global::System.Web.UI.WebControls.TextBox TitleTextBox;
         
         /// <summary>
         /// CancelButton control.
