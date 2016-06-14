@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 //using statements required for EF DB access
 using COMP2007_Lab3_Raill.Models;
 using System.Web.ModelBinding;
@@ -34,7 +35,7 @@ namespace COMP2007_Lab3_Raill
 
                 //add data to the new course record
                 newCourse.Title = TitleTextBox.Text;
-                
+
 
                 //use linq and ADO.NET to add/insert a new course into the DB
                 db.Courses.Add(newCourse);
