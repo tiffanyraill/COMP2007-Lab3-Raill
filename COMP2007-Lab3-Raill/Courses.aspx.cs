@@ -39,10 +39,10 @@ namespace COMP2007_Lab3_Raill
             using (DefaultConnection db = new DefaultConnection())
             {
                 //query the students table using EF and LINQ
-                var Course = (from allCourses in db.Courses
+                var Courses = (from allCourses in db.Courses
                               select allCourses);
                 //bind the results to the gridview
-                CoursesGridView.DataSource = Course.ToList();
+                CoursesGridView.DataSource = Courses.ToList();
                 CoursesGridView.DataBind();
             }
         }
